@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.admin-page {
+    padding: 20px;
+    background-color: transparent;
+    /*
+    height: 93vh;
+    */
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    border-color: #71747a;
+}
+
+::placeholder {
+    color: #ffffff99;
+}
+
+.input-field-sub-code {
+    background-image: linear-gradient(to right ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    color: #ffffff;
+    height: 45px;
+    width: 100%;
+    padding: 3px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 4px;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+.select-btn {
+    background-color: #52637d;
+    background-image: linear-gradient(to right ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    color: #ffffff;
+    height: 45px;
+    width: 100%;
+    padding: 3px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 4px;
+    font-family: "Roboto";
+}
+
+.Height {
+    height: 50px;
+}
+
+.input-no-of-question {
+    background-image: linear-gradient(to right ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    color: #ffffff;
+    height: 45px;
+    width: 100%;
+    margin-top: 5px;
+    padding: 3px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 4px;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+.create-score-btn {
+    background-image: linear-gradient(to right ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    color: #ffffff;
+    height: 45px;
+    width: 100%;
+    padding: 3px;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 2px;
+    border-radius: 4px;
+    font-family: "Roboto";
+    border: none;
+}
+
+.head-question {
+    font-family: "Roboto";
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.input-question {
+    width: 100%;
+    height: 100px;
+    color: #ffffff;
+    background-color: #0c1a30;
+    text-align: center;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.options-field {
+    margin-top: 10px;
+}
+
+.input-option {
+    width: 100%;
+    height: 65px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #284a7d;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.generate-btn {
+    background-color: #52637d;
+    color: #ffffff;
+    height: 45px;
+    width: 100%;
+    padding: 3px;
+    border-style: solid;
+    border-radius: 4px;
+    font-family: "Roboto";
+    border: none;
+    margin-top: 20px;
+}
+
+.icons-margin {
+    margin: 5px;
+}
+
+.hoizontal-line {
+    background-color: #71747a;
+    margin-top: 50px;
+}
+
+/* Customize the label (the container) */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
