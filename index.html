@@ -2,55 +2,62 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css"/>
+    <title>Sona Quiz</title>
 </head>
 
-<body style="background-color: #000000;">
+<body style="background-color: #021F24;">
+    <div>
+        <img style="width: 100%;" src="asserts/sona-logo.png"/>
+    </div>
     <div class="admin-page">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-4 col-md-3 Height">
                     <div class="d-flex flex-row justify-content-center">
-                        <input type="text" class="input-field-sub-code" placeholder="Sub Code" />
+                        <select class="select-btn" id="subject"><option value="">Subject</option> </select>
                     </div>
                 </div>
                 <div class="col-4 col-md-3 Height">
                     <div class="d-flex flex-row justify-content-center">
-                        <select class="select-btn">
-                            <option value="0">Dept</option>
-                            <option value="1">AIDS</option>
-                            <option value="2">AIML</option>
-                            <option value="3">BME</option>
-                            <option value="4">CSD</option>
-                            <option value="5">CSE</option>
-                            <option value="6">CIVIL</option>
-                            <option value="7">ECE</option>
-                            <option value="8">EEE</option>
-                            <option value="9">FT</option>
-                            <option value="10">MCT</option>
-                            <option value="11">MECH</option>
+                        <select class="select-btn" id="dept">
+                            <option value="">Dept</option>
+                            <option value="aids">AIDS</option>
+                            <option value="aiml">AIML</option>
+                            <option value="bme">BME</option>
+                            <option value="csd">CSD</option>
+                            <option value="cse">CSE</option>
+                            <option value="civil">CIVIL</option>
+                            <option value="ece">ECE</option>
+                            <option value="eee">EEE</option>
+                            <option value="ft">FT</option>
+                            <option value="it">IT</option>
+                            <option value="mct">MCT</option>
+                            <option value="mech">MECH</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-4 col-md-3 Height">
                     <div class="d-flex flex-row justify-content-center">
-                        <select class="select-btn">
-                            <option class="option-color" value="0">Sec</option>
-                            <option class="option-color" value="1">A</option>
-                            <option class="option-color" value="2">B</option>
-                            <option class="option-color" value="3">C</option>
-                            <option class="option-color" value="4">D</option>
+                        <select class="select-btn" id="section">
+                            <option class="option-color" value="">Sec</option>
+                            <option class="option-color" value="a">A</option>
+                            <option class="option-color" value="b">B</option>
+                            <option class="option-color" value="c">C</option>
+                            <option class="option-color" value="d">D</option>
                         </select>
                     </div>
                 </div>
-                <div class="col-4 col-md-3 Height">
+                <div class="col-6 col-md-3 Height">
                     <div class="d-flex flex-row justify-content-center">
                         <select class="select-btn">
-                            <option class="option-color" value="0">Unit</option>
+                            <option class="option-color" value="">Unit</option>
                             <option class="option-color" value="1">CO1</option>
                             <option class="option-color" value="2">CO2</option>
                             <option class="option-color" value="3">CO3</option>
@@ -59,108 +66,50 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-8 col-md-12 Height">
+                <div class="col-6 col-md-4 Height">
                     <div class="d-flex flex-row justify-content-center">
-                        <input type="text" class="input-no-of-question" placeholder="No. of Questions" />
+                        <select class="year-select-btn" id="year">
+                            <option class="option-color" value="">Year</option>
+                            <option class="option-color" value="i">I Year</option>
+                            <option class="option-color" value="ii">II Year</option>
+                            <option class="option-color" value="iii">III Year</option>
+                            <option class="option-color" value="iv">IV Year</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="d-flex flex-row justify-content-center">
+                        <button class="create-score-btn" type="submit" id="submitbtn">
+                            Get subject
+                        </button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 Height">
+                    <div class="d-flex flex-row justify-content-center">
+                        <input type="number" id="questionCount" min="3" max="10" class="input-no-of-question" placeholder="No. of Questions Min: 3 Max: 10" />
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex flex-row justify-content-center">
-                        <button class="create-score-btn btn">
+                        <button onclick="generateQuestions()" class="create-score-btn">
                             Create
                         </button>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex flex-row justify-content-center">
-                        <button class="create-score-btn btn">
+                        <button id="scorebtn" class="create-score-btn">
                             Score
                         </button>
                     </div>
                 </div>
             </div>
-            <hr class="hoizontal-line"/>
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="head-question">Question:</h1>
-                </div>
-                <div class="col-12 d-flex flex-row justify-content-end">
-                    <hr />
-                    <div class="icons-margin">
-                        <img src="asserts/formula.png"/>
-                        <img src="asserts/add-image.png"/>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <input class="input-question" type="text" placeholder="Type your Question here." />
-                </div>
+            <div id="questions-wrapper"></div>
+            <div class="question-container">
+                
             </div>
-            <div class="row options-field">
-                <div class="col-12 col-md-6 col-lg-3 options-field">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div class="icons-margin">
-                            <label class="checkbox-container">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="icons-margin">
-                            <img src="asserts/formula.png"/>
-                            <img src="asserts/add-image.png"/>
-                        </div>
-                    </div>
-                    <input class="input-option" type="text" placeholder="Type Option 1 here." />
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 options-field">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div class="icons-margin">
-                            <label class="checkbox-container">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="icons-margin">
-                            <img src="asserts/formula.png"/>
-                            <img src="asserts/add-image.png"/>
-                        </div>
-                    </div>
-                    <input class="input-option" type="text" placeholder="Type Option 2 here." />
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 options-field">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div class="icons-margin">
-                            <label class="checkbox-container">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="icons-margin">
-                            <img src="asserts/formula.png"/>
-                            <img src="asserts/add-image.png"/>
-                        </div>
-                    </div>
-                    <input class="input-option" type="text" placeholder="Type Option 3 here." />
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 options-field">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div class="icons-margin">
-                            <label class="checkbox-container">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="icons-margin">
-                            <img src="asserts/formula.png"/>
-                            <img src="asserts/add-image.png"/>
-                            <img src="asserts/reduce.png"/>
-                            <img src="asserts/add-new.png"/>
-                        </div>
-                    </div>
-                    <input class="input-option" type="text" placeholder="Type Option 4 here." />
-                </div>
-            </div>
-            <div class="row d-flex flex-row justify-content-center">
-                <div class="col-6">
+            <div class="generate-btn-container row d-flex flex-row justify-content-center">
+                <div class="col-4">
                     <button class="generate-btn btn">
                         Generate
                     </button>
@@ -168,6 +117,10 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"> 
+        
+    </script>
 </body>
 
 </html>
