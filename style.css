@@ -3,12 +3,8 @@
 .admin-page {
     padding: 20px;
     background-color: transparent;
-    /*
-    height: 93vh;
-    */
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 15px;
+    margin-top: 40px;
     border-style: solid;
     border-width: 2px;
     border-radius: 8px;
@@ -32,6 +28,11 @@
     text-align: center;
 }
 
+.input-field-sub-code:hover {
+    background-image: linear-gradient(to left ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    transform: scale(1.02);
+}
+
 .select-btn {
     background-color: #52637d;
     background-image: linear-gradient(to right ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
@@ -40,9 +41,30 @@
     width: 100%;
     padding: 3px;
     border-style: solid;
+    border-width: 1px;
     border-color: #ffffff;
     border-radius: 4px;
     font-family: "Roboto";
+}
+
+.year-select-btn {
+    background-color: #52637d;
+    background-image: linear-gradient(to right ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    color: #ffffff;
+    height: 45px;
+    width: 100%;
+    padding: 3px;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    border-radius: 4px;
+    font-family: "Roboto";
+}
+
+.select-btn:hover {
+    background-image: linear-gradient(to left ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    transform: scale(1.02);
 }
 
 .Height {
@@ -54,13 +76,19 @@
     color: #ffffff;
     height: 45px;
     width: 100%;
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 3px;
     border-style: solid;
+    border-width: 1px;
     border-color: #ffffff;
     border-radius: 4px;
     font-family: "Roboto";
     text-align: center;
+}
+
+.input-no-of-question:hover {
+    background-image: linear-gradient(to left ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    transform: scale(1.02);
 }
 
 .create-score-btn {
@@ -72,10 +100,15 @@
     margin-top: 10px;
     border-style: solid;
     border-color: #ffffff;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 4px;
     font-family: "Roboto";
-    border: none;
+}
+
+.create-score-btn:hover {
+    background-image: linear-gradient(to left ,#3da3bf, #358ba3, #2e7a8f, #1d4c59);
+    transform: scale(1.02);
+    color: #ffffff;
 }
 
 .head-question {
@@ -93,20 +126,71 @@
     text-align: center;
     border-style: solid;
     border-radius: 15px;
+    border-color: #71747a;
+}
+
+.input-question-image {
+    width: 100%;
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: #0c1a30;
+    text-align: center;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #71747a;
+    height: 44rem;
+}
+
+.input-option-image {
+    width: 100%;
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: #284a7d;
+    text-align: center;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #71747a;
+    height: 26rem;
 }
 
 .options-field {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .input-option {
     width: 100%;
-    height: 65px;
+    height: 70px;
     color: #ffffff;
     text-align: center;
     background-color: #284a7d;
     border-style: solid;
     border-radius: 15px;
+}
+
+.upload-image-qn-btn {
+    background-color: #52637d;
+    color: #ffffff;
+    height: 45px;
+    width: 25%;
+    padding: 3px;
+    border-style: solid;
+    border-radius: 4px;
+    font-family: "Roboto";
+    border: none;
+    margin-top: 20px;
+}
+
+.upload-image-op-btn {
+    background-color: #52637d;
+    color: #ffffff;
+    height: 45px;
+    width: 50%;
+    padding: 3px;
+    border-style: solid;
+    border-radius: 4px;
+    font-family: "Roboto";
+    border: none;
+    margin-top: 20px;
 }
 
 .generate-btn {
@@ -120,18 +204,27 @@
     font-family: "Roboto";
     border: none;
     margin-top: 20px;
+    display: none;
 }
 
-.icons-margin {
+.generate-btn:hover {
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+.add-image-btn:hover {
+    transform: scale(1.05);
+}
+
+.icons-container-margin {
     margin: 5px;
 }
 
-.hoizontal-line {
+.horizontal-line {
     background-color: #71747a;
     margin-top: 50px;
 }
 
-/* Customize the label (the container) */
 .checkbox-container {
     display: block;
     position: relative;
@@ -143,51 +236,44 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* Hide the browser's default checkbox */
-  .checkbox-container input {
+}
+
+.checkbox-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
+}
+
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
     background-color: #eee;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .checkbox-container:hover input ~ .checkmark {
+}
+
+.checkbox-container:hover input ~ .checkmark {
     background-color: #ccc;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .checkbox-container input:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #284a7d;
+}
+
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .checkbox-container input:checked ~ .checkmark:after {
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
     display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .checkbox-container .checkmark:after {
+}
+
+.checkbox-container .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -197,4 +283,4 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
+}
