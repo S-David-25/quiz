@@ -8,8 +8,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/mathlive"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css"/>
-    <title>Sona Quiz</title>
+    <title>
+        Sona Quiz
+    </title>
 </head>
 
 <body style="background-color: #DEDEDE;">
@@ -38,6 +43,7 @@
                         </select>
                     </div>
                 </div>
+
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                     <div class="d-flex flex-row justify-content-center">
                         <select class="select-btn" id="year">
@@ -49,6 +55,7 @@
                         </select>
                     </div>
                 </div>
+                
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                     <div class="d-flex flex-row justify-content-center">
                         <select class="select-btn" id="section">
@@ -60,6 +67,7 @@
                         </select>
                     </div>
                 </div>
+
                 <div class="col-6 col-sm-6 col-md-12 col-lg-3 col-xl-3">
                     <div class="d-flex flex-row justify-content-center">
                         <button class="get-create-score-btn" type="submit" id="submitbtn">
@@ -67,15 +75,17 @@
                         </button>
                     </div>
                 </div>
+
                 <hr class="horizontal"/>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                     <div class="d-flex flex-row justify-content-center">
                         <select class="select-btn" id="subject"><option value="">Subject</option> </select>
                     </div>
                 </div>
+
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
                     <div class="d-flex flex-row justify-content-center">
-                        <select class="select-btn">
+                        <select class="select-btn" id="unit">
                             <option class="option-color" value="">Unit</option>
                             <option class="option-color" value="1">CO1</option>
                             <option class="option-color" value="2">CO2</option>
@@ -85,11 +95,13 @@
                         </select>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-4 col-lg-3 col-xl-3">
                     <div class="d-flex flex-row justify-content-center">
                         <input type="number" id="questionCount" min="3" max="10" class="input-no-of-question" placeholder="No. of Questions Min: 3 Max: 10" />
                     </div>
                 </div>
+
                 <div class="col-6 col-md-6 col-lg-3 col-xl-3">
                     <div class="d-flex flex-row justify-content-center">
                         <button onclick="generateQuestions()" class="get-create-score-btn">
@@ -97,7 +109,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="d-inline d-md-inline d-lg-none col-6 col-md-6 col-lg-3 col-xl-3">
+
+                <div class="d-none d-lg-block col-lg-9 col-xl-9"></div>
+                <div class="col-6 col-md-6 col-lg-3 col-xl-3">
                     <div class="d-flex flex-row justify-content-center">
                         <button id="scorebtn" class="get-create-score-btn">
                             Score
@@ -105,34 +119,24 @@
                     </div>
                 </div>
             </div>
-            <div class="row d-flex flex-row justify-content-end">
-                <div class="d-none d-md-none d-lg-inline col-6 col-md-4 col-lg-3 col-xl-3">
-                    <div class="d-flex flex-row justify-content-center">
-                        <button id="scorebtn" class="get-create-score-btn">
-                            Score
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div id="questions-wrapper"></div>
-                <div class="question-container">
-                    
-                </div>
+        </div>
+    </div>
+
+    <div class="admin-page-2" style="display: none;">
+        <div class="container-fluid">
+            <div id="questions-wrapper"></div>
+            <div class="question-container">
+                
             </div>
             <div class="generate-btn-container row d-flex flex-row justify-content-center">
-                <div class="col-4">
-                    <button class="generate-btn">
+                <div class="col-6 d-flex justify-content-center">
+                    <button class="generate-btn" id="generatebtn">
                         Generate
                     </button>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="script.js"> 
-        
-    </script>
+    </div>    
 </body>
 
 </html>
