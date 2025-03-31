@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
+
 .admin-page {
     background-color: transparent;
-    margin: 50px;
+    margin: 25px;
+    padding-top: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    border-color: #4B95DF;
+}
+
+.admin-page-2 {
+    background-color: transparent;
+    margin: 25px;
     padding-top: 25px;
     border-style: solid;
     border-width: 2px;
@@ -90,12 +101,14 @@
 .input-question {
     width: 100%;
     height: 180px;
+    font-size: 18px;
     color: #000000;
     background-color: #ffffff;
     text-align: center;
     border-style: solid;
     border-radius: 15px;
     border-color: #4B95DF;
+    border-width: 2px;
 }
 
 .input-question:hover {
@@ -194,8 +207,8 @@
 
 .input-option-1 {
     width: 100%;
-    height: 150px;
-    color: #ffffff;
+    height: 90px;
+    color: #000000;
     font-size: 18px;
     text-align: center;
     background: linear-gradient(130deg, #19A473 47.83%, #0FFFAB 66.98%);
@@ -206,8 +219,8 @@
 
 .input-option-2 {
     width: 100%;
-    height: 150px;
-    color: #ffffff;
+    height: 90px;
+    color: #000000;
     font-size: 18px;
     text-align: center;
     background: linear-gradient(130deg, #2B6A77 46.37%, #50C5DD 90.66%);
@@ -218,8 +231,8 @@
 
 .input-option-3 {
     width: 100%;
-    height: 150px;
-    color: #ffffff;
+    height: 90px;
+    color: #000000;
     font-size: 18px;
     text-align: center;
     background: linear-gradient(130deg, #684FC4 29.39%, #9788CD 88.33%);
@@ -230,8 +243,8 @@
 
 .input-option-4 {
     width: 100%;
-    height: 150px;
-    color: #ffffff;
+    height: 90px;
+    color: #000000;
     font-size: 18px;
     text-align: center;
     background: linear-gradient(130deg, #129285 44.52%, #1EF8E2 80.04%);
@@ -296,7 +309,7 @@
     background-color: #4B95DF;
     color: #000000;
     height: 45px;
-    width: 100%;
+    width: 150px;
     padding: 3px;
     border-style: solid;
     border-width: 1px;
@@ -312,9 +325,12 @@
     transform: scale(1.01);
 }
 
+.formula-btn {
+    cursor: pointer;
+}
+
 .formula-btn:hover {
     transform: scale(1.05);
-    cursor: pointer;
 }
 
 .add-image-btn:hover {
@@ -350,69 +366,28 @@
     margin-bottom: 30px;
 }
 
-.checkbox-container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.checkbox-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
+input[type="radio"] {
+    appearance: none;
     width: 25px;
-    background-color: #eee;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 2px;
-    border-color: #4B95DF;
+    height: 25px;
+    border: 2px solid #4B95DF;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.08s ease-in-out;
 }
 
-.checkbox-container:hover input ~ .checkmark {
+input[type="radio"]:hover {
+    border-color: #3478bd;
     background-color: #ccc;
     transform: scale(1.06);
 }
 
-.checkbox-container input:checked ~ .checkmark {
+input[type="radio"]:checked {
     background-color: #4B95DF;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.checkbox-container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.checkbox-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid #ffffff;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    border: 4px solid #ccc;
+    box-shadow: 0 0 0 2px #3478bd;
+    transform: scale(1.00);
 }
 
 .custom-ok-button {
@@ -425,4 +400,8 @@
 
 .custom-ok-button:hover {
     transform: scale(1.05);
+}
+
+math-field::part(placeholder) {
+    color: #000000b2 !important;
 }
