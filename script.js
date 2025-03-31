@@ -175,7 +175,6 @@ function generateQuestions() {
                     <div class="formula-add-image-container col-12 d-flex flex-row justify-content-end">
                         <hr />
                         <div class="icons-container-margin">
-                            <img class="formula-btn" src="asserts/formula.png" data-target="${'qnn'+i}"/>
                             <img id="addImageBtn" class="add-image-btn" onclick="showQnImage('.question-image-hide-${i}')" src="asserts/add-image.png"/>
                         </div>
                     </div>
@@ -212,7 +211,6 @@ function generateQuestions() {
                                 </label>
                             </div>
                             <div class="icons-container-margin">
-                                <img class="formula-btn" src="asserts/formula.png"/>
                                 <img class="add-image-btn" onclick="showOptImage('.option-image-hide-${i}1')" src="asserts/add-image.png"/>
                             </div>
                         </div>
@@ -246,7 +244,6 @@ function generateQuestions() {
                                 </label>
                             </div>
                             <div class="icons-container-margin">
-                                <img class="formula-btn" src="asserts/formula.png"/>
                                 <img class="add-image-btn" onclick="showOptImage('.option-image-hide-${i}2')" src="asserts/add-image.png"/>
                             </div>
                         </div>
@@ -280,7 +277,6 @@ function generateQuestions() {
                                 </label>
                             </div>
                             <div class="icons-container-margin">
-                                <img class="formula-btn" src="asserts/formula.png"/>
                                 <img class="add-image-btn" onclick="showOptImage('.option-image-hide-${i}3')" src="asserts/add-image.png"/>
                             </div>
                         </div>
@@ -314,7 +310,6 @@ function generateQuestions() {
                                 </label>
                             </div>
                             <div class="icons-container-margin">
-                                <img class="formula-btn" src="asserts/formula.png"/>
                                 <img class="add-image-btn" onclick="showOptImage('.option-image-hide-${i}4')" src="asserts/add-image.png"/>
                             </div>
                         </div>
